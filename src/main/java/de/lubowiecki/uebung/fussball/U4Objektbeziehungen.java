@@ -1,4 +1,4 @@
-package de.lubowiecki.uebung;
+package de.lubowiecki.uebung.fussball;
 
 public class U4Objektbeziehungen {
 
