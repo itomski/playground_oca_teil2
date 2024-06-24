@@ -7,4 +7,7 @@ public class U7Strings {
     // Wenn es mit Text vorkommt, soll danach der gleiche Text ausgegeben werden, allerding das
     // gesuchte Wort soll duch das gleiche Wort in Großbuchstaben ersetzt werden
 
+    // str.indexOf("A") // erstes Vorkommen
+    // str.lastIndexOf("A") // letztes Vorkommen
+
 }
