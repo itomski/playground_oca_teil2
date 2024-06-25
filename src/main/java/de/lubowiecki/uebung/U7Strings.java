@@ -10,4 +10,15 @@ public class U7Strings {
     // str.indexOf("A") // erstes Vorkommen
     // str.lastIndexOf("A") // letztes Vorkommen
 
+    public static void main(String[] args) {
+
+        String s = "Hallo Welt";
+        int pos = s.indexOf("Welt");
+        if(pos >= 0)
+            System.out.println("Wort wurde an Pos " + pos + " gefunden");
+
+
+        String zahl = String.valueOf(100); // Wandelt 100 in String um
+        zahl = 100 + ""; // Wandelt ebenfalls 100 in String um
+    }
 }
