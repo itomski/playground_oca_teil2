@@ -28,9 +28,14 @@ public class MultiArraysTest {
 
         Object o = new int[]{7,8,99,15};
         System.out.println(((int[])o)[3]);
-        System.out.println(((byte[])o)[3]); // ClassCastException: Das Objekt auf dem Heap hat einen anderen Typ
+        //System.out.println(((byte[])o)[3]); // ClassCastException: Das Objekt auf dem Heap hat einen anderen Typ
 
         //double[] arr2 = new int[]{7,8,9}; // int-Array kann nicht automatisch zu double-Array erweitert werden
+
+        long l = 100;
+        //int[] arr2 = new int[-10];
+        int[] arr2 = new int[10];
+        System.out.println(arr2[10]);
 
     }
 }
