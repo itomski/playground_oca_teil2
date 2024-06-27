@@ -2,15 +2,16 @@ package de.lubowiecki;
 
 public class OperatorTest {
 
+
     public static void main(String[] args) {
 
         int i = 22;
         int erg = (10 + 17) * ++i;
-                //      27  * 23
+        //      27  * 23
 
         i = 1;
         erg = ++i + i++ + ++i;
-            // 2 + 2 + 4
+        // 2 + 2 + 4
         System.out.println(erg);
 
         i = 1;
@@ -39,26 +40,26 @@ public class OperatorTest {
         int c = 18;
 
         // Relationale-Ops
-        if(a > b) System.out.println("a ist größer als b");
-        if(a < b) System.out.println("a ist kleiner als b");
-        if(a <= b) System.out.println("a ist kleiner-gleich b");
-        if(a >= b) System.out.println("a ist größer-gleich b");
-        if(a == b) System.out.println("a ist gleich b");
-        if(a != b) System.out.println("a ist NICHT gleich b");
+        if (a > b) System.out.println("a ist größer als b");
+        if (a < b) System.out.println("a ist kleiner als b");
+        if (a <= b) System.out.println("a ist kleiner-gleich b");
+        if (a >= b) System.out.println("a ist größer-gleich b");
+        if (a == b) System.out.println("a ist gleich b");
+        if (a != b) System.out.println("a ist NICHT gleich b");
 
         // Logische-Ops
-        if(a > b && b < c) System.out.println("...."); // Beide Vergleichen müssen ein true ergeben, dann true
-        if(a > b || b < c) System.out.println("...."); // Eine Seite muss true ergeben, dann true
+        if (a > b && b < c) System.out.println("...."); // Beide Vergleichen müssen ein true ergeben, dann true
+        if (a > b || b < c) System.out.println("...."); // Eine Seite muss true ergeben, dann true
 
         // XOR - Exclusiv-Oder
-        if(a > b ^ b < c) System.out.println("...."); // Nur eine der Seite darf true ergeben, dann true
+        if (a > b ^ b < c) System.out.println("...."); // Nur eine der Seite darf true ergeben, dann true
 
         System.out.println();
 
         a = 3;
         b = 2;
         c = 3;
-        if(a < ++b && ++b == c) {
+        if (a < ++b && ++b == c) {
             System.out.println("HIER!!!!");
         }
         System.out.println(a);
@@ -67,12 +68,12 @@ public class OperatorTest {
         String s2 = "Hallo Welt";
 
         // &&: Führt nur den zweiten Vergleich aus, wenn der erste true ergibt
-        if(s2 != null && s2.length() > 2) {
+        if (s2 != null && s2.length() > 2) {
             System.out.println("String ist ok!");
         }
 
         // &: Führt immer beide Seiten aus
-        if(s2 != null & s2.length() > 2) {
+        if (s2 != null & s2.length() > 2) {
             System.out.println("String ist ok!");
         }
 
