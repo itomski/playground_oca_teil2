@@ -12,4 +12,8 @@ public class U12Exceptions {
     // Exception an den Aufrufer weitergeben.
     // Führe dafür die Behandlung in der Main-Methode ein
 
+    // Hilfe: sollte der String nicht passen, kann mit
+    // throw new RuntimeException("...")
+    // selbt eine Exception geworfen werden
+
 }
