@@ -4,6 +4,8 @@ package de.lubowiecki;
 // Instanzvariablen
 // Lokale Variablen (Methoden Parameter sind auch lokale Variablen)
 
+import java.util.Objects;
+
 public class Person {
 
     static String typ = "Mensch"; // Ist immer verfügbar
@@ -37,5 +39,20 @@ public class Person {
         sb.append(", alter=").append(alter);
         sb.append('}');
         return sb.toString();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        System.out.println("EQUALS");
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Person person = (Person) o;
+        return alter == person.alter && Objects.equals(name, person.name);
+    }
+
+    @Override
+    public int hashCode() {
+        System.out.println("HASHCODE");
+        return Objects.hash(name, alter);
     }
 }
