@@ -20,7 +20,6 @@ public class EigeneExceptionTest {
         catch (ZuAltException e) {
             System.out.println("Dein alter passt nicht! Du bist zu alt.");
         }
-
     }
 
     public static int checkAlter(int alter) {
