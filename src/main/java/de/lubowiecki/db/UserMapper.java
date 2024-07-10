@@ -1,9 +1,6 @@
 package de.lubowiecki.db;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -62,16 +59,24 @@ public class UserMapper { // Mögliche Namen wären: UserManager oder UserReposi
 
     private boolean insert(User user) throws SQLException {
 
-        final String SQL = "INSERT INTO " + TABLE + " (id, firstname, lastname) VALUES(null, '%s', '%s')";
+        final String SQL = "INSERT INTO " + TABLE + " (id, firstname, lastname) VALUES(null, ?, ?)";
+
+        // PreparedStatement macht eine SQLInjection unmöglich
 
         try(Connection connection = ConnectionFactory.getConnection();
-            Statement stmt = connection.createStatement()) {
+            PreparedStatement stmt = connection.prepareStatement(SQL)) {
 
-            return stmt.executeUpdate(String.format(SQL, user.getFirstname(), user.getLastname())) == 1;
+            // Werden nicht als Befehl interpretiert
+            stmt.setString(1, user.getFirstname());
+            stmt.setString(2, user.getLastname());
+
+            return stmt.executeUpdate() == 1;
         }
     }
 
     private boolean update(User user) throws SQLException {
+
+        // TODO: gegen SQLInjection absichern
 
         final String SQL = "UPDATE " + TABLE + " SET firstname = '%s', lastname = '%s' WHERE id = " + user.getId();
 
