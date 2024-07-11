@@ -58,7 +58,8 @@ public class App {
 
         }
         catch(SQLException ex) {
-            System.out.println("...");
+            System.out.println(ex.getMessage());
+            //ex.printStackTrace();
         }
     }
 }
