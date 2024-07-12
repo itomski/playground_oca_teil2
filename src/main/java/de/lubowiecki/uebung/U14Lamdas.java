@@ -3,6 +3,7 @@ package de.lubowiecki.uebung;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.function.Predicate;
 
 public class U14Lamdas {
 
@@ -52,6 +53,12 @@ public class U14Lamdas {
         p2.print("Das ist die Lösung!");
         p3.print("Das ist die Lösung!");
 
+
+        Predicate p = (x) -> x.equals(null);
+        p.test(new Object());
+
+        Predicate<String> ps = (x) -> x.toLowerCase().equals("moin");
+        ps.test("hallo welt");
 
     }
 }
