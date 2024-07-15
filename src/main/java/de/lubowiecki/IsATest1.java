@@ -19,7 +19,7 @@ public class IsATest1 {
         Object o2 = n1; // Jede Number ist ein Objekt!
         //Integer i1 = n1; // Error: Nicht jede Number ist ein Integer!
         Integer i1 = (Integer)n1; // Ok, wenn auf dem Heap wirklich ein Integer liegt
-        Double d1 = (Double)n1; // Auf dem Heap liegt ein Integer daher ClassCastException
+        //Double d1 = (Double)n1; // Auf dem Heap liegt ein Integer daher ClassCastException
 
         int i = 100;
         double d = i; // 100.0
@@ -49,6 +49,10 @@ public class IsATest1 {
         liste2.add("Bruce");
 
         printOtherList(liste2); // Ok: ArrayList IS-A List
+
+
+        Object o = "Hallo Welt";
+        System.out.println("String: " + (o instanceof String));
 
     }
 
