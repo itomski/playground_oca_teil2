@@ -8,10 +8,13 @@ public class Test {
 
         Computer c = new Computer();
         Ventilator v = new Ventilator();
+        SmartPhone sp = new SmartPhone();
 
         Multistecker ms = new Multistecker();
         ms.add(c);
         ms.add(v);
+        //ms.add(sp); // Geht nicht ohne Adapter
+        ms.add(new SteckdoseZuUsbCSteckerAdapter(sp));
 
         Steckdose sd = new Steckdose();
         sd.einstecken(ms);
