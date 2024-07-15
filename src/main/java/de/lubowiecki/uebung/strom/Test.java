@@ -14,7 +14,7 @@ public class Test {
         ms.add(c);
         ms.add(v);
         //ms.add(sp); // Geht nicht ohne Adapter
-        ms.add(new SteckdoseZuUsbCSteckerAdapter(sp));
+        ms.add(new SteckdoseZuUsbSteckerAdapter(sp));
 
         Steckdose sd = new Steckdose();
         sd.einstecken(ms);

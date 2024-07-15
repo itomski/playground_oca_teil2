@@ -1,12 +1,12 @@
 package de.lubowiecki.uebung.strom;
 
-public class SteckdoseZuUsbCSteckerAdapter implements Stecker {
+public class SteckdoseZuUsbSteckerAdapter implements Stecker {
 
     // Adapter
 
-    private UsbCStecker geraet;
+    private UsbStecker geraet;
 
-    public SteckdoseZuUsbCSteckerAdapter(UsbCStecker geraet) {
+    public SteckdoseZuUsbSteckerAdapter(UsbStecker geraet) {
         this.geraet = geraet;
     }
 

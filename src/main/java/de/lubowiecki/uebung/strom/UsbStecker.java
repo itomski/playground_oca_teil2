@@ -1,6 +1,6 @@
 package de.lubowiecki.uebung.strom;
 
-public interface UsbCStecker {
+public interface UsbStecker {
 
     void laden();
 

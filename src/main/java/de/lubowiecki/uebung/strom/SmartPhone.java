@@ -1,6 +1,6 @@
 package de.lubowiecki.uebung.strom;
 
-public class SmartPhone implements UsbCStecker {
+public class SmartPhone implements UsbStecker {
 
     @Override
     public void laden() {
