@@ -13,7 +13,7 @@ public class Test {
         Multistecker ms = new Multistecker();
         ms.add(c);
         ms.add(v);
-        //ms.add(sp); // Geht nicht ohne Adapter
+        //ms.add(sp); // Geht nicht ohne Adapter. SmartPhone nutzt UsbStecker
         ms.add(new SteckdoseZuUsbSteckerAdapter(sp));
 
         Steckdose sd = new Steckdose();
