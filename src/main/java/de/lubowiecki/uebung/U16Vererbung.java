@@ -9,5 +9,4 @@ public class U16Vererbung {
     // Überlege welche Methoden vererbt werden müssen, ob Konstruktoren nötig sind
     // und welche Eigenschaften und Methoden speziell zu jeweilegen Klasse gehören
 
-
 }

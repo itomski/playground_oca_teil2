@@ -40,7 +40,7 @@ public class ReturnTest {
 
 class ParentD {
 
-    public ParentD(int x) {
+    public ParentD() {
         // super(); // Benutzt den Parameterlosen-Konstruktor von Object
     }
 
@@ -62,8 +62,8 @@ class ParentD {
 class ChildD extends ParentD {
 
     public ChildD() {
-        // super(); // Benutzt den Parameterlosen-Konstruktor von ParentD
-        super(10); // Benutzt den Int-Parameter-Konstruktor von ParentD
+        super(); // Benutzt den Parameterlosen-Konstruktor von ParentD
+        //super(10); // Benutzt den Int-Parameter-Konstruktor von ParentD
     }
 
     public ChildD(int z) {
